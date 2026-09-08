@@ -1,3 +1,9 @@
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+function assetPath(path: string) {
+  return `${basePath}${path}`;
+}
+
 const services = [
   {
     number: '01',
@@ -155,7 +161,7 @@ export default function Home() {
             <div className="hero-arch" aria-hidden="true" />
             <figure className="hero-photo">
               <img
-                src="/images/paige-assisting-bride.jpg"
+                src={assetPath('/images/paige-assisting-bride.jpg')}
                 alt="Paige helping a bride carry her train outside the wedding venue"
                 width="2200"
                 height="1651"
@@ -192,7 +198,7 @@ export default function Home() {
           <div className="experience-grid">
             <figure className="experience-photo image-frame">
               <img
-                src="/images/reception-overview.jpg"
+                src={assetPath('/images/reception-overview.jpg')}
                 alt="A candlelit wedding reception with the newly married couple embracing"
                 width="1067"
                 height="1600"
@@ -243,7 +249,7 @@ export default function Home() {
           <div className="gallery-grid">
             <figure className="gallery-item gallery-details">
               <img
-                src="/images/bridal-details.jpg"
+                src={assetPath('/images/bridal-details.jpg')}
                 alt="Bridal shoes, orchids, and wedding rings"
                 width="1067"
                 height="1600"
@@ -253,7 +259,7 @@ export default function Home() {
             </figure>
             <figure className="gallery-item gallery-cake">
               <img
-                src="/images/wedding-cake.jpg"
+                src={assetPath('/images/wedding-cake.jpg')}
                 alt="Two-tier wedding cake decorated with pale roses and orchids"
                 width="1067"
                 height="1600"
@@ -263,7 +269,7 @@ export default function Home() {
             </figure>
             <figure className="gallery-item gallery-aisle">
               <img
-                src="/images/bride-walking-aisle.jpg"
+                src={assetPath('/images/bride-walking-aisle.jpg')}
                 alt="Bride walking toward her wedding ceremony with her escort"
                 width="1067"
                 height="712"
@@ -273,7 +279,7 @@ export default function Home() {
             </figure>
             <figure className="gallery-item gallery-table">
               <img
-                src="/images/candlelit-reception-table.jpg"
+                src={assetPath('/images/candlelit-reception-table.jpg')}
                 alt="Candlelit reception table arranged with flowers and glassware"
                 width="1061"
                 height="1600"
@@ -335,7 +341,7 @@ export default function Home() {
           <div className="about-images">
             <figure className="about-main-image">
               <img
-                src="/images/paige-styling-tablescape.jpg"
+                src={assetPath('/images/paige-styling-tablescape.jpg')}
                 alt="Paige smiling while arranging flowers on a wedding table"
                 width="1170"
                 height="746"
@@ -344,7 +350,7 @@ export default function Home() {
             </figure>
             <figure className="about-portrait image-frame">
               <img
-                src="/images/paige-southwick-portrait.jpg"
+                src={assetPath('/images/paige-southwick-portrait.jpg')}
                 alt="Portrait of Paige Southwick"
                 width="1400"
                 height="1866"
@@ -478,7 +484,7 @@ export default function Home() {
           </div>
           <figure className="contact-photo">
             <img
-              src="/images/candlelit-reception-table.jpg"
+              src={assetPath('/images/candlelit-reception-table.jpg')}
               alt="Elegant wedding dinner table glowing in candlelight"
               width="1061"
               height="1600"

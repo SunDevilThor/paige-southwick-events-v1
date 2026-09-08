@@ -13,25 +13,33 @@ const arima = Arima({
   subsets: ['latin'],
 });
 
+const configuredSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  'https://sundevilthor.github.io/paige-southwick-events/';
+const siteUrl = new URL(
+  configuredSiteUrl.endsWith('/')
+    ? configuredSiteUrl
+    : `${configuredSiteUrl}/`,
+);
+const socialImageUrl = new URL('og.png', siteUrl).toString();
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ??
-      'https://paige-southwick-events.thorkeane.chatgpt.site',
-  ),
+  metadataBase: siteUrl,
   title: 'Paige Southwick Events | Wedding Planning & Design',
   description:
     'Thoughtful wedding planning, design, and coordination with Paige Southwick, so you can stay present for every moment.',
   alternates: {
-    canonical: '/',
+    canonical: siteUrl.toString(),
   },
   openGraph: {
     type: 'website',
+    url: siteUrl.toString(),
     title: 'Paige Southwick Events | Your day, beautifully held.',
     description:
       'Thoughtful wedding planning, design, and coordination with Paige Southwick.',
     images: [
       {
-        url: '/og.png',
+        url: socialImageUrl,
         width: 1200,
         height: 630,
         alt: 'Paige Southwick Events, Your day, beautifully held.',
@@ -43,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Paige Southwick Events | Your day, beautifully held.',
     description:
       'Thoughtful wedding planning, design, and coordination with Paige Southwick.',
-    images: ['/og.png'],
+    images: [socialImageUrl],
   },
 };
 

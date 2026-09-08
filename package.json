@@ -1,5 +1,5 @@
 {
-  "name": "sites-project",
+  "name": "paige-southwick-events",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
+    "build:pages": "next build",
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },
