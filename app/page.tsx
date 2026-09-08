@@ -7,10 +7,10 @@ function assetPath(path: string) {
 const services = [
   {
     number: '01',
-    name: 'Full Planning',
+    name: 'Full Service Planning',
     tagline: 'From the ring through the final send-off.',
     price: '$5,000',
-    subject: 'Full Planning inquiry',
+    subject: 'Full Service Planning inquiry',
     features: [
       'Step-by-step planning with biweekly guides and check-ins',
       'Recommended vendors and thoughtful budget assistance',
@@ -25,7 +25,7 @@ const services = [
     price: '$4,000',
     subject: 'Partial Planning inquiry',
     features: [
-      'Hands-on help booking three key vendors',
+      'Hands-on help booking up to three key vendors',
       'Planning support beginning 90 days before your wedding',
       'Vendor confirmations, venue walk-through, and layout planning',
       'Final confirmations, rehearsal, and full wedding-day execution',
@@ -33,10 +33,10 @@ const services = [
   },
   {
     number: '03',
-    name: 'Wedding Day Coordination',
+    name: 'Day of Coordination',
     tagline: 'Your plans, brought together with care.',
     price: '$2,000',
-    subject: 'Wedding day coordination inquiry',
+    subject: 'Day of Coordination inquiry',
     features: [
       'Support beginning 60 days before your wedding',
       'Confirmation of all your pre-booked vendors',
@@ -50,12 +50,12 @@ const faqs = [
   {
     question: 'When does planning support begin?',
     answer:
-      'Full Planning begins with the ring. Planning and Coordination begins 90 days before the wedding, and Wedding Day Coordination begins 60 days before the wedding.',
+      'Full Service Planning begins with the ring. Partial Planning begins 90 days before the wedding, and Day of Coordination begins 60 days before the wedding.',
   },
   {
     question: 'Which package includes help finding vendors?',
     answer:
-      'Full Planning includes recommended vendors throughout the process. Planning and Coordination includes hands-on help booking three key vendors. Wedding Day Coordination is designed for couples who have already booked their vendor team.',
+      'Full Service Planning includes recommended vendors throughout the process. Partial Planning includes hands-on help booking up to three key vendors. Day of Coordination is designed for couples who have already booked their vendor team.',
   },
   {
     question: 'Are the rehearsal and wedding day included?',
@@ -149,11 +149,11 @@ export default function Home() {
             </div>
 
             <div className="service-note" aria-label="Available planning services">
-              <span>Full planning</span>
+              <span>Full service planning</span>
               <i aria-hidden="true" />
               <span>Partial planning</span>
               <i aria-hidden="true" />
-              <span>Wedding coordination</span>
+              <span>Day of coordination</span>
             </div>
           </div>
 

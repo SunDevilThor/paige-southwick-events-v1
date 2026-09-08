@@ -15,7 +15,7 @@ const arima = Arima({
 
 const configuredSiteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
-  'https://sundevilthor.github.io/paige-southwick-events/';
+  'https://sundevilthor.github.io/paige-southwick-events-v1/';
 const siteUrl = new URL(
   configuredSiteUrl.endsWith('/')
     ? configuredSiteUrl
